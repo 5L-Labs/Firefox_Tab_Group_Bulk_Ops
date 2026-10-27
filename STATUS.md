@@ -4,6 +4,7 @@ Read this first when resuming. Release steps live in [PUBLISHING.md](PUBLISHING.
 
 ## Where things stand
 
+- Repo moved from NickJLange to **5L-Labs/Firefox_Tab_Group_Bulk_Ops** (old URLs redirect).
 - `master` is clean and pushed; no open PRs.
 - **Published:** version `1.0.3` is public on AMO as
   [tab-group-bulk-operations](https://addons.mozilla.org/en-US/firefox/addon/tab-group-bulk-operations/),
@@ -11,12 +12,16 @@ Read this first when resuming. Release steps live in [PUBLISHING.md](PUBLISHING.
   `v1.0.3` **draft** releases from CI retries can be deleted.
 - Release CI (`.github/workflows/release.yml`) reads the AMO secrets from the GitHub environment
   `AMO_API_KEY`. The same Mozilla account and API keys also publish
-  [videospeed-firefox](https://github.com/NickJLange/videospeed-firefox) (see its `STATUS.md`);
+  [videospeed-firefox](https://github.com/5L-Labs/videospeed-firefox) (see its `STATUS.md`);
   rotating the keys breaks both release jobs.
+- After the move to 5L-Labs, Amp's GitHub token saw **no environments** on this repo (404 on
+  `AMO_API_KEY`); that may only be the token's visibility, so check
+  [Settings → Environments](https://github.com/5L-Labs/Firefox_Tab_Group_Bulk_Ops/settings/environments)
+  and recreate it with the AMO secrets before the next release.
 
 ## Parked work
 
-- **Alphabetical group sorting:** [PR #3](https://github.com/NickJLange/Firefox_Tab_Group_Bulk_Ops/pull/3)
+- **Alphabetical group sorting:** [PR #3](https://github.com/5L-Labs/Firefox_Tab_Group_Bulk_Ops/pull/3)
   was closed unmerged. Branch `feature/alphabetical-sorting` still exists, but it predates the
   Mozilla-compliance and copy-group-URLs work, so rebase or re-implement on current `master`.
 - Branch `mozilla-compliance` is fully merged (PR #4) and can be deleted.
